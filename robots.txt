@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://tech.eyebrowkang.com/sitemap.xml

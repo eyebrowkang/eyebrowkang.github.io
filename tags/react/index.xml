@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>react on Share Some Tech</title>
+    <link>https://tech.eyebrowkang.com/tags/react/</link>
+    <description>Recent content in react on Share Some Tech</description>
+    <image>
+      <title>Share Some Tech</title>
+      <url>https://tech.eyebrowkang.com/blog-cover.png</url>
+      <link>https://tech.eyebrowkang.com/blog-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 07 Jul 2021 16:58:24 +0800</lastBuildDate><atom:link href="https://tech.eyebrowkang.com/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>结合React上手esbuild（新手适用）</title>
+      <link>https://tech.eyebrowkang.com/posts/2021-07-07-%E7%BB%93%E5%90%88react%E4%B8%8A%E6%89%8Besbuild%E6%96%B0%E6%89%8B%E9%80%82%E7%94%A8/</link>
+      <pubDate>Wed, 07 Jul 2021 16:58:24 +0800</pubDate>
+      
+      <guid>https://tech.eyebrowkang.com/posts/2021-07-07-%E7%BB%93%E5%90%88react%E4%B8%8A%E6%89%8Besbuild%E6%96%B0%E6%89%8B%E9%80%82%E7%94%A8/</guid>
+      <description>我们都知道 react 有一个官方的脚手架 create-react-app，一条命令就可以让你使用 react 编写代码，但是在这个脚手架中 react 代码的打包过程对我们是完全隐藏的。
+对于一个新手来说，比如我刚接触到这个工具的时候是充满了疑惑的，为什么我不能npm install react react-dom然后直接使用script标签引入呢？为什么这些代码要打包才可以使用？打包很复杂吗？怎么进行打包呢？
+上面这些问题我们暂且不做回答，下面直接使用 esbuild 这个打包工具，带大家从零开始制作一个简单的 react 页面。
+esbuild 是一个比较新的打包工具，这里是它的官方文档，相较于 create-react-app 使用的 webpack 而言，它的优点是快，缺点是不支持 css module 等特性。当然了，如果你一定要使用 css module 的话，那么很抱歉这篇文章不能帮助到你
+开始动手 1. 初始化 确定你已经安装好了node和npm，然后打开电脑的命令行，新建一个文件夹，并运行npm init -y
+2. 安装依赖 安装需要用到的依赖，我们会用到react react-dom esbuild这三个包
+3. 新建文件 打开你的 vs code 或者其他编辑器，新建一个 html 文件，以及一个 src 文件夹（包含一个 css 文件和一个 jsx 文件）
+4. 写代码 在你的 jsx 和 css 中随便写点什么
+import React from &amp;#34;react&amp;#34;; import ReactDOM from &amp;#34;react-dom&amp;#34;; import &amp;#34;.</description>
+    </item>
+    
+  </channel>
+</rss>

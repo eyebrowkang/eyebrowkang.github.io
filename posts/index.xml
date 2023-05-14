@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Share Some Tech</title>
+    <link>https://tech.eyebrowkang.com/posts/</link>
+    <description>Recent content in Posts on Share Some Tech</description>
+    <image>
+      <title>Share Some Tech</title>
+      <url>https://tech.eyebrowkang.com/blog-cover.png</url>
+      <link>https://tech.eyebrowkang.com/blog-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 30 Jul 2022 21:03:59 +0800</lastBuildDate><atom:link href="https://tech.eyebrowkang.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>axios源码解析（五）</title>
+      <link>https://tech.eyebrowkang.com/posts/2022-07-30-axios%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E4%BA%94/</link>
+      <pubDate>Sat, 30 Jul 2022 21:03:59 +0800</pubDate>
+      
+      <guid>https://tech.eyebrowkang.com/posts/2022-07-30-axios%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E4%BA%94/</guid>
+      <description>Fetch Adapter</description>
+    </item>
+    
+    <item>
+      <title>axios源码解析（四）</title>
+      <link>https://tech.eyebrowkang.com/posts/2022-06-16-axios%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E5%9B%9B/</link>
+      <pubDate>Thu, 16 Jun 2022 21:03:51 +0800</pubDate>
+      
+      <guid>https://tech.eyebrowkang.com/posts/2022-06-16-axios%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E5%9B%9B/</guid>
+      <description>高级配置</description>
+    </item>
+    
+    <item>
+      <title>axios源码解析（三）</title>
+      <link>https://tech.eyebrowkang.com/posts/2022-06-02-axios%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E4%B8%89/</link>
+      <pubDate>Thu, 02 Jun 2022 21:03:44 +0800</pubDate>
+      
+      <guid>https://tech.eyebrowkang.com/posts/2022-06-02-axios%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E4%B8%89/</guid>
+      <description>中止请求与错误处理</description>
+    </item>
+    
+    <item>
+      <title>axios源码解析（二）</title>
+      <link>https://tech.eyebrowkang.com/posts/2022-05-16-axios%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E4%BA%8C/</link>
+      <pubDate>Mon, 16 May 2022 21:03:37 +0800</pubDate>
+      
+      <guid>https://tech.eyebrowkang.com/posts/2022-05-16-axios%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E4%BA%8C/</guid>
+      <description>拦截器分析</description>
+    </item>
+    
+    <item>
+      <title>axios源码解析（一）</title>
+      <link>https://tech.eyebrowkang.com/posts/2022-05-03-axios%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E4%B8%80/</link>
+      <pubDate>Tue, 03 May 2022 21:03:27 +0800</pubDate>
+      
+      <guid>https://tech.eyebrowkang.com/posts/2022-05-03-axios%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E4%B8%80/</guid>
+      <description>主要逻辑梳理</description>
+    </item>
+    
+    <item>
+      <title>结合React上手esbuild（新手适用）</title>
+      <link>https://tech.eyebrowkang.com/posts/2021-07-07-%E7%BB%93%E5%90%88react%E4%B8%8A%E6%89%8Besbuild%E6%96%B0%E6%89%8B%E9%80%82%E7%94%A8/</link>
+      <pubDate>Wed, 07 Jul 2021 16:58:24 +0800</pubDate>
+      
+      <guid>https://tech.eyebrowkang.com/posts/2021-07-07-%E7%BB%93%E5%90%88react%E4%B8%8A%E6%89%8Besbuild%E6%96%B0%E6%89%8B%E9%80%82%E7%94%A8/</guid>
+      <description>我们都知道 react 有一个官方的脚手架 create-react-app，一条命令就可以让你使用 react 编写代码，但是在这个脚手架中 react 代码的打包过程对我们是完全隐藏的。
+对于一个新手来说，比如我刚接触到这个工具的时候是充满了疑惑的，为什么我不能npm install react react-dom然后直接使用script标签引入呢？为什么这些代码要打包才可以使用？打包很复杂吗？怎么进行打包呢？
+上面这些问题我们暂且不做回答，下面直接使用 esbuild 这个打包工具，带大家从零开始制作一个简单的 react 页面。
+esbuild 是一个比较新的打包工具，这里是它的官方文档，相较于 create-react-app 使用的 webpack 而言，它的优点是快，缺点是不支持 css module 等特性。当然了，如果你一定要使用 css module 的话，那么很抱歉这篇文章不能帮助到你
+开始动手 1. 初始化 确定你已经安装好了node和npm，然后打开电脑的命令行，新建一个文件夹，并运行npm init -y
+2. 安装依赖 安装需要用到的依赖，我们会用到react react-dom esbuild这三个包
+3. 新建文件 打开你的 vs code 或者其他编辑器，新建一个 html 文件，以及一个 src 文件夹（包含一个 css 文件和一个 jsx 文件）
+4. 写代码 在你的 jsx 和 css 中随便写点什么
+import React from &amp;#34;react&amp;#34;; import ReactDOM from &amp;#34;react-dom&amp;#34;; import &amp;#34;.</description>
+    </item>
+    
+    <item>
+      <title>Vite vs Webpack vs Esbuild</title>
+      <link>https://tech.eyebrowkang.com/posts/2020-09-05-vite_vs_webpack_vs_esbuild/</link>
+      <pubDate>Sat, 05 Sep 2020 15:00:00 +0800</pubDate>
+      
+      <guid>https://tech.eyebrowkang.com/posts/2020-09-05-vite_vs_webpack_vs_esbuild/</guid>
+      <description>本篇文章分享下题目中三种打包工具在开发和生产模式中的实际使用感受，希望能对你有所帮助。我使用的技术栈是react+typescript+express，开发模式使用打包工具自带的开发服务器，生产模式使用一个简单的 express 服务器，代码放在这里GitHub。由于本文目的是对比，因此对于配置项的详细介绍以及具体代码就省略掉了，需要的可以自行查看官方文档（vite、webpack、esbuild）。
+配置文件 Typtescript 支持 vite 和 webpack 均支持*.config.ts格式的配置文件，而 esbuild 由于没有对应的cli启动工具，因此其需要使用node *.js命令来启动，因此不适合使用 ts。
+开发模式 开发模式的对比项目主要包括配置难度、启动速度、热更新及路由的配置三个项目。
+配置难度 vite: 最简单，几乎零配置。vite 官方有许多模版可以直接使用，但即使不用模版，你只需要配置一个 react 热更新插件就足够了。不过，如果你使用的框架没有对应插件，或者你不希望使用默认的配置，那么你就需要仔细阅读文档，并且你需要同时学习 vite 和 rollup 甚至 esbuild 的文档，才能够随心所欲的配置。 esbuild: 比较简单。esbuild 的配置项并不多，你只需要增加一个 servedir 就可以使用它的开发服务器了。 webpack: 比较复杂。这里我使用的是 webpack5，只进行最基础的配置和代码分割优化，但是仍然需要安装一大堆的第三方包。其余的配置都需要根据文档一步步进行配置，对于新手并不是特别友好。另外，由于 ts-loader 实在太慢，我这里使用了 esbuild-loader（应该是最快加载 ts 文件的 loader 了）。 启动速度（使用相同的代码及入口） esbuild: 最快。 vite: 比 esbuild 慢近 10 倍，但实际感知不强，依然非常的快。 webpack: 比 vite 慢 10 倍有余，实际能感知，需要等待。 热更新及react-router路由配置 vite: 配置官方插件后支持热更新及react-router webpack: 热更新需要在 devServer 中开启，react-router也需要进行配置。 esbuild: 开发服务器不支持热更新，不支持react-router配置 生产模式 生产模式主要对比代码分离和速度两个项目。其配置难度可以参考开发模式，另外，实际三个打包工具都可以将开发模式和生产模式的配置集成在一个配置文件中，但是这里为了对比，我分别写了开发和生产的配置文件。
+代码分离 和 打包速度 esbuild: 速度最快，但代码分离效果最差。可以看到，最大的 js 文件有 4.</description>
+    </item>
+    
+  </channel>
+</rss>

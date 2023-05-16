@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>frontend on Share Some Tech</title>
+    <link>https://tech.eyebrowkang.com/tags/frontend/</link>
+    <description>Recent content in frontend on Share Some Tech</description>
+    <image>
+      <title>Share Some Tech</title>
+      <url>https://tech.eyebrowkang.com/blog-cover.png</url>
+      <link>https://tech.eyebrowkang.com/blog-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 16 May 2023 22:57:49 +0800</lastBuildDate><atom:link href="https://tech.eyebrowkang.com/tags/frontend/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ESLint和Prettier配置</title>
+      <link>https://tech.eyebrowkang.com/posts/2023-05-16-eslint%E5%92%8Cprettier%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Tue, 16 May 2023 22:57:49 +0800</pubDate>
+      
+      <guid>https://tech.eyebrowkang.com/posts/2023-05-16-eslint%E5%92%8Cprettier%E9%85%8D%E7%BD%AE/</guid>
+      <description>前端项目中 ESlint 和 Prettier 可以说几乎是标配了，大多数情况下一些官方脚手架会帮助你设置好相关配置，这可以为框架使用者省掉不少麻烦。但是有时候你需要自定义一些 lint 或者 format 规则，或者是你单纯的想学习这类工具怎么使用，那么就需要学习一下如何自己配置了。
+简单了解 ESLint 和 Prettier 这是ESLint 官网上的原话：
+ESLint statically analyzes your code to quickly find problems. It is built into most text editors and you can run ESLint as part of your continuous integration pipeline.
+翻译成中文，意思就是：
+ESLint 静态地分析你的代码，以快速发现问题。它内置在大多数文本编辑器中，你可以把 ESLint 作为持续集成管道的一部分来运行。
+也就是说 ESLint 是一个代码质量检查工具，可以发现代码中的问题。实际上，我们阅读 ESLint 的文档可以了解到，ESLint 同时还有规范代码样式的功能，它同时也是一个代码格式化工具。
+那么Prettier呢，官方说它是An opinionated code formatter，一个有主见的代码格式化工具。这样看来似乎 Prettier 也是一个代码格式化工具，但是 ESLint 就可以进行代码格式化了，难道不重复吗。事实上确实会有项目只配置使用 ESLint，但是我个人更倾向于各司其职，专门的工具用来做专门的事情。这里举一个例子，比如在 CI/CD 的过程中只需要运行 lint 的相关任务，因为这个时候代码本身的样式其实并不重要。如果 ESLint 既要处理代码质量问题又要处理代码本身的样式问题，显然是没有必要的，浪费了部署时间，也增加了部署失败的风险。更多的原因和观点可以从二者的官网或者互联网上找到，这里对此不再赘述。 也正是因为如此，我们可以对 ESLint 和 Prettier 分别进行配置，互不干扰。</description>
+    </item>
+    
+  </channel>
+</rss>

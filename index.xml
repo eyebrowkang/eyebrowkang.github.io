@@ -10,7 +10,22 @@
       <link>https://tech.eyebrowkang.com/blog-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 16 May 2023 22:57:49 +0800</lastBuildDate><atom:link href="https://tech.eyebrowkang.com/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh</language>
+    <lastBuildDate>Sat, 03 Jun 2023 18:27:50 +0800</lastBuildDate><atom:link href="https://tech.eyebrowkang.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>配置你的GitHub(包括SSH和GPG)</title>
+      <link>https://tech.eyebrowkang.com/posts/2023-06-03-%E9%85%8D%E7%BD%AE%E4%BD%A0%E7%9A%84github%E5%8C%85%E6%8B%ACssh%E5%92%8Cgpg/</link>
+      <pubDate>Sat, 03 Jun 2023 18:27:50 +0800</pubDate>
+      
+      <guid>https://tech.eyebrowkang.com/posts/2023-06-03-%E9%85%8D%E7%BD%AE%E4%BD%A0%E7%9A%84github%E5%8C%85%E6%8B%ACssh%E5%92%8Cgpg/</guid>
+      <description>由于有时候会在不同的主机上修改我的一些 GitHub 仓库代码，这些代码大多是一些配置文件，比如各种 dotfile，每次增加一台新机器就需要重新设置一遍，因此在此记录一下配置步骤，后续考虑尽可能集成到一个脚本中。以下内容并不适用 Windows 系统。
+SSH 相关配置 首先来配置 ssh，虽然这不是唯一的推送方式，但是在一台较为常用且安全性得到保障（没有暴露在公网）的机器上，我认为还是 SSH 配置更好一些，可以免去每次粘贴一大段 token 的必要，接下来的部分主要都参考自 GitHub 的官方文档。
+生成 SSH 密钥 这里用到的命令是ssh-keygen，如果你的系统没有这个命令，那么访问这里来查看并安装对应的包。你可以通过man ssh-keygen查看该命令的详细手册，在其诸多选项中，此处只会用到 -t 选项，这决定了生成密钥使用的算法。 打开终端，在命令行输入ssh-keygen -t ed25519，然后会得到类似这样的输出：
+Generating public/private ed25519 key pair. Enter file in which to save the key (/root/.ssh/id_ed25519): 这是在让我们选择密钥的保存位置，如果这是第一次生成，那么直接回车即可，接着会出现以下内容：
+Enter passphrase (empty for no passphrase): 这是让我们为此密钥设置一个密码，设置完成之后按回车，或者直接按回车代表不设置密码，然后重复密码并回车，一个密钥就生成了。这个命令的整体输出类似这样：
+➜ ~ ssh-keygen -t ed25519 Generating public/private ed25519 key pair. Enter file in which to save the key (/root/.ssh/id_ed25519): Enter passphrase (empty for no passphrase): Enter same passphrase again: Your identification has been saved in /root/.</description>
+    </item>
+    
     <item>
       <title>ESLint和Prettier配置</title>
       <link>https://tech.eyebrowkang.com/posts/2023-05-16-eslint%E5%92%8Cprettier%E9%85%8D%E7%BD%AE/</link>

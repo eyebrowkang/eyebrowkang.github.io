@@ -10,6 +10,7 @@
       <link>https://tech.eyebrowkang.com/blog-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
     <lastBuildDate>Wed, 07 Jul 2021 16:58:24 +0800</lastBuildDate><atom:link href="https://tech.eyebrowkang.com/tags/bundler/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>结合React上手esbuild（新手适用）</title>

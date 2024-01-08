@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Share Some Tech</title>
     <link>https://tech.eyebrowkang.com/</link>
@@ -11,26 +11,12 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 03 Jun 2023 18:27:50 +0800</lastBuildDate><atom:link href="https://tech.eyebrowkang.com/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>配置你的GitHub(包括SSH和GPG)</title>
-      <link>https://tech.eyebrowkang.com/posts/2023-06-03-%E9%85%8D%E7%BD%AE%E4%BD%A0%E7%9A%84github%E5%8C%85%E6%8B%ACssh%E5%92%8Cgpg/</link>
-      <pubDate>Sat, 03 Jun 2023 18:27:50 +0800</pubDate>
-      
-      <guid>https://tech.eyebrowkang.com/posts/2023-06-03-%E9%85%8D%E7%BD%AE%E4%BD%A0%E7%9A%84github%E5%8C%85%E6%8B%ACssh%E5%92%8Cgpg/</guid>
-      <description>由于有时候会在不同的主机上修改我的一些 GitHub 仓库代码，这些代码大多是一些配置文件，比如各种 dotfile，每次增加一台新机器就需要重新设置一遍，因此在此记录一下配置步骤，后续考虑尽可能集成到一个脚本中。以下内容并不适用 Windows 系统。
-SSH 相关配置 首先来配置 ssh，虽然这不是唯一的推送方式，但是在一台较为常用且安全性得到保障（没有暴露在公网）的机器上，我认为还是 SSH 配置更好一些，可以免去每次粘贴一大段 token 的必要，接下来的部分主要都参考自 GitHub 的官方文档。
-生成 SSH 密钥 这里用到的命令是ssh-keygen，如果你的系统没有这个命令，那么访问这里来查看并安装对应的包。你可以通过man ssh-keygen查看该命令的详细手册，在其诸多选项中，此处只会用到 -t 选项，这决定了生成密钥使用的算法。 打开终端，在命令行输入ssh-keygen -t ed25519，然后会得到类似这样的输出：
-Generating public/private ed25519 key pair. Enter file in which to save the key (/root/.ssh/id_ed25519): 这是在让我们选择密钥的保存位置，如果这是第一次生成，那么直接回车即可，接着会出现以下内容：
-Enter passphrase (empty for no passphrase): 这是让我们为此密钥设置一个密码，设置完成之后按回车，或者直接按回车代表不设置密码，然后重复密码并回车，一个密钥就生成了。这个命令的整体输出类似这样：
-➜ ~ ssh-keygen -t ed25519 Generating public/private ed25519 key pair. Enter file in which to save the key (/root/.ssh/id_ed25519): Enter passphrase (empty for no passphrase): Enter same passphrase again: Your identification has been saved in /root/.</description>
-    </item>
-    
+    <lastBuildDate>Tue, 16 May 2023 22:57:49 +0800</lastBuildDate>
+    <atom:link href="https://tech.eyebrowkang.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ESLint和Prettier配置</title>
       <link>https://tech.eyebrowkang.com/posts/2023-05-16-eslint%E5%92%8Cprettier%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Tue, 16 May 2023 22:57:49 +0800</pubDate>
-      
       <guid>https://tech.eyebrowkang.com/posts/2023-05-16-eslint%E5%92%8Cprettier%E9%85%8D%E7%BD%AE/</guid>
       <description>前端项目中 ESlint 和 Prettier 可以说几乎是标配了，大多数情况下一些官方脚手架会帮助你设置好相关配置，这可以为框架使用者省掉不少麻烦。但是有时候你需要自定义一些 lint 或者 format 规则，或者是你单纯的想学习这类工具怎么使用，那么就需要学习一下如何自己配置了。
 简单了解 ESLint 和 Prettier 这是ESLint 官网上的原话：
@@ -40,57 +26,45 @@ ESLint 静态地分析你的代码，以快速发现问题。它内置在大多�
 也就是说 ESLint 是一个代码质量检查工具，可以发现代码中的问题。实际上，我们阅读 ESLint 的文档可以了解到，ESLint 同时还有规范代码样式的功能，它同时也是一个代码格式化工具。
 那么Prettier呢，官方说它是An opinionated code formatter，一个有主见的代码格式化工具。这样看来似乎 Prettier 也是一个代码格式化工具，但是 ESLint 就可以进行代码格式化了，难道不重复吗。事实上确实会有项目只配置使用 ESLint，但是我个人更倾向于各司其职，专门的工具用来做专门的事情。这里举一个例子，比如在 CI/CD 的过程中只需要运行 lint 的相关任务，因为这个时候代码本身的样式其实并不重要。如果 ESLint 既要处理代码质量问题又要处理代码本身的样式问题，显然是没有必要的，浪费了部署时间，也增加了部署失败的风险。更多的原因和观点可以从二者的官网或者互联网上找到，这里对此不再赘述。 也正是因为如此，我们可以对 ESLint 和 Prettier 分别进行配置，互不干扰。</description>
     </item>
-    
     <item>
       <title>axios源码解析（五）</title>
       <link>https://tech.eyebrowkang.com/posts/2022-07-30-axios%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E4%BA%94/</link>
       <pubDate>Sat, 30 Jul 2022 21:03:59 +0800</pubDate>
-      
       <guid>https://tech.eyebrowkang.com/posts/2022-07-30-axios%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E4%BA%94/</guid>
       <description>Fetch Adapter</description>
     </item>
-    
     <item>
       <title>axios源码解析（四）</title>
       <link>https://tech.eyebrowkang.com/posts/2022-06-16-axios%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E5%9B%9B/</link>
       <pubDate>Thu, 16 Jun 2022 21:03:51 +0800</pubDate>
-      
       <guid>https://tech.eyebrowkang.com/posts/2022-06-16-axios%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E5%9B%9B/</guid>
       <description>高级配置</description>
     </item>
-    
     <item>
       <title>axios源码解析（三）</title>
       <link>https://tech.eyebrowkang.com/posts/2022-06-02-axios%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E4%B8%89/</link>
       <pubDate>Thu, 02 Jun 2022 21:03:44 +0800</pubDate>
-      
       <guid>https://tech.eyebrowkang.com/posts/2022-06-02-axios%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E4%B8%89/</guid>
       <description>中止请求与错误处理</description>
     </item>
-    
     <item>
       <title>axios源码解析（二）</title>
       <link>https://tech.eyebrowkang.com/posts/2022-05-16-axios%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E4%BA%8C/</link>
       <pubDate>Mon, 16 May 2022 21:03:37 +0800</pubDate>
-      
       <guid>https://tech.eyebrowkang.com/posts/2022-05-16-axios%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E4%BA%8C/</guid>
       <description>拦截器分析</description>
     </item>
-    
     <item>
       <title>axios源码解析（一）</title>
       <link>https://tech.eyebrowkang.com/posts/2022-05-03-axios%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E4%B8%80/</link>
       <pubDate>Tue, 03 May 2022 21:03:27 +0800</pubDate>
-      
       <guid>https://tech.eyebrowkang.com/posts/2022-05-03-axios%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E4%B8%80/</guid>
       <description>主要逻辑梳理</description>
     </item>
-    
     <item>
       <title>结合React上手esbuild（新手适用）</title>
       <link>https://tech.eyebrowkang.com/posts/2021-07-07-%E7%BB%93%E5%90%88react%E4%B8%8A%E6%89%8Besbuild%E6%96%B0%E6%89%8B%E9%80%82%E7%94%A8/</link>
       <pubDate>Wed, 07 Jul 2021 16:58:24 +0800</pubDate>
-      
       <guid>https://tech.eyebrowkang.com/posts/2021-07-07-%E7%BB%93%E5%90%88react%E4%B8%8A%E6%89%8Besbuild%E6%96%B0%E6%89%8B%E9%80%82%E7%94%A8/</guid>
       <description>我们都知道 react 有一个官方的脚手架 create-react-app，一条命令就可以让你使用 react 编写代码，但是在这个脚手架中 react 代码的打包过程对我们是完全隐藏的。
 对于一个新手来说，比如我刚接触到这个工具的时候是充满了疑惑的，为什么我不能npm install react react-dom然后直接使用script标签引入呢？为什么这些代码要打包才可以使用？打包很复杂吗？怎么进行打包呢？
@@ -102,12 +76,10 @@ esbuild 是一个比较新的打包工具，这里是它的官方文档，相较
 4. 写代码 在你的 jsx 和 css 中随便写点什么
 import React from &amp;#34;react&amp;#34;; import ReactDOM from &amp;#34;react-dom&amp;#34;; import &amp;#34;.</description>
     </item>
-    
     <item>
       <title>Vite vs Webpack vs Esbuild</title>
       <link>https://tech.eyebrowkang.com/posts/2020-09-05-vite_vs_webpack_vs_esbuild/</link>
       <pubDate>Sat, 05 Sep 2020 15:00:00 +0800</pubDate>
-      
       <guid>https://tech.eyebrowkang.com/posts/2020-09-05-vite_vs_webpack_vs_esbuild/</guid>
       <description>本篇文章分享下题目中三种打包工具在开发和生产模式中的实际使用感受，希望能对你有所帮助。我使用的技术栈是react+typescript+express，开发模式使用打包工具自带的开发服务器，生产模式使用一个简单的 express 服务器，代码放在这里GitHub。由于本文目的是对比，因此对于配置项的详细介绍以及具体代码就省略掉了，需要的可以自行查看官方文档（vite、webpack、esbuild）。
 配置文件 Typtescript 支持 vite 和 webpack 均支持*.config.ts格式的配置文件，而 esbuild 由于没有对应的cli启动工具，因此其需要使用node *.js命令来启动，因此不适合使用 ts。
@@ -115,8 +87,5 @@ import React from &amp;#34;react&amp;#34;; import ReactDOM from &amp;#34;react-d
 配置难度 vite: 最简单，几乎零配置。vite 官方有许多模版可以直接使用，但即使不用模版，你只需要配置一个 react 热更新插件就足够了。不过，如果你使用的框架没有对应插件，或者你不希望使用默认的配置，那么你就需要仔细阅读文档，并且你需要同时学习 vite 和 rollup 甚至 esbuild 的文档，才能够随心所欲的配置。 esbuild: 比较简单。esbuild 的配置项并不多，你只需要增加一个 servedir 就可以使用它的开发服务器了。 webpack: 比较复杂。这里我使用的是 webpack5，只进行最基础的配置和代码分割优化，但是仍然需要安装一大堆的第三方包。其余的配置都需要根据文档一步步进行配置，对于新手并不是特别友好。另外，由于 ts-loader 实在太慢，我这里使用了 esbuild-loader（应该是最快加载 ts 文件的 loader 了）。 启动速度（使用相同的代码及入口） esbuild: 最快。 vite: 比 esbuild 慢近 10 倍，但实际感知不强，依然非常的快。 webpack: 比 vite 慢 10 倍有余，实际能感知，需要等待。 热更新及react-router路由配置 vite: 配置官方插件后支持热更新及react-router webpack: 热更新需要在 devServer 中开启，react-router也需要进行配置。 esbuild: 开发服务器不支持热更新，不支持react-router配置 生产模式 生产模式主要对比代码分离和速度两个项目。其配置难度可以参考开发模式，另外，实际三个打包工具都可以将开发模式和生产模式的配置集成在一个配置文件中，但是这里为了对比，我分别写了开发和生产的配置文件。
 代码分离 和 打包速度 esbuild: 速度最快，但代码分离效果最差。可以看到，最大的 js 文件有 4.</description>
     </item>
-    
-    
-    
   </channel>
 </rss>

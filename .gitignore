@@ -1,0 +1,10 @@
+.vscode
+.idea
+.nvim.lua
+
+node_modules
+dist
+
+.DS_Store
+
+*.local

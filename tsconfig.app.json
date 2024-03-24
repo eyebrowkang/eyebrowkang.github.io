@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": [
+      "ESNext",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "jsxImportSource": "react",
+    "module": "ESNext",
+    "rootDir": "./",
+    "moduleResolution": "Bundler",
+    "types": [],
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "verbatimModuleSyntax": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitThis": true,
+    "skipLibCheck": true
+  },
+  "include": ["env.d.ts", "src/**/*"]
+}

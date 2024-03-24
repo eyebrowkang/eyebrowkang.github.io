@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "eyebrowkang.github.io",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Tech Test Bed",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint --config ./eslint.config.js .",
+    "format": "prettier --write src/"
+  },
+  "keywords": [
+    "testbed"
+  ],
+  "author": "eyebrowkang",
+  "license": "MIT",
+  "dependencies": {
+    "@hcaptcha/react-hcaptcha": "~1.10.1",
+    "@supabase/supabase-js": "~2.39.8",
+    "react": "~18.2.0",
+    "react-dom": "~18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "~18.2.67",
+    "@types/react-dom": "~18.2.22",
+    "@vitejs/plugin-react": "~4.2.1",
+    "eslint": "~8.57.0",
+    "eslint-config-prettier": "~9.1.0",
+    "eslint-plugin-react": "~7.34.1",
+    "prettier": "~3.2.5",
+    "typescript": "~5.4.3",
+    "typescript-eslint": "~7.3.1",
+    "vite": "~5.2.2"
+  }
+}

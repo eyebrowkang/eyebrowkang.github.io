@@ -38,11 +38,13 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Setup Environment Variables
+        run: |
+          echo "VITE_SUP_PROJECT_URL=${{ secrets.SUP_PROJECT_URL }}" >> .env
+          echo "VITE_SUP_ANON_KEY=${{ secrets.SUP_ANON_KEY }}" >> .env
+          echo "VITE_HCAPTCHA_SITE_KEY=${{ secrets.HCAPTCHA_SITE_KEY }}" >> .env
+
       - name: Build
-        env:
-          VITE_SUP_PROJECT_URL: ${{ secrets.SUP_PROJECT_URL }}
-          VITE_SUP_ANON_KEY: ${{ secrets.SUP_ANON_KEY }}
-          VITE_HCAPTCHA_SITE_KEY: ${{ secrets.HCAPTCHA_SITE_KEY }}
         run: pnpm build
 
       - name: Deploy to gh-pages

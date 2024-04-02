@@ -16,6 +16,6 @@
     "moduleResolution": "Bundler",
     "types": ["node"]
   },
-  "include": ["vite.config.*"]
+  "include": ["vite.config.*", "vite-plugin-404.ts"]
 }
 

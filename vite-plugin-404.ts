@@ -15,17 +15,26 @@ const generate404Plugin = (): Plugin => {
           console.error(err);
           return;
         }
-        const script = `
+        // 生成一个重定向脚本，直接加载 index.html 的内容，而不改变 URL
+        const redirectScript = `
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    if (!window.location.hash && window.location.pathname !== '/') {
-      window.history.replaceState(null, null, '/#' + window.location.pathname + window.location.search);
-      window.location.reload();
-    }
-  });
+  // 确保我们不在根路径时执行重定向
+  if (window.location.pathname !== '/') {
+    // 使用 fetch API 获取 index.html 的内容
+    fetch('/index.html')
+      .then(function(response) {
+        return response.text();
+      })
+      .then(function(html) {
+        document.open();
+        document.write(html);
+        document.close();
+      });
+  }
 </script>
 `;
-        const newData = data.replace('</body>', `${script}</body>`);
+
+        const newData = data.replace('</body>', `${redirectScript}</body>`);
 
         fs.writeFile(notFoundPath, newData, 'utf8', (err) => {
           if (err) {

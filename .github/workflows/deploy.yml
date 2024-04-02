@@ -38,14 +38,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Setup Environment Variables
-        run: |
-          echo "VITE_SUP_PROJECT_URL=${{ secrets.SUP_PROJECT_URL }}" >> .env.production
-          echo "VITE_SUP_ANON_KEY=${{ secrets.SUP_ANON_KEY }}" >> .env.production
-          echo "VITE_HCAPTCHA_SITE_KEY=${{ secrets.HCAPTCHA_SITE_KEY }}" >> .env.production
-
       - name: Build
-        run: pnpm build
+        run: VITE_SUP_PROJECT_URL=${{ secrets.SUP_PROJECT_URL }} VITE_SUP_ANON_KEY=${{ secrets.SUP_ANON_KEY }} VITE_HCAPTCHA_SITE_KEY=${{ secrets.HCAPTCHA_SITE_KEY }} pnpm build
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3

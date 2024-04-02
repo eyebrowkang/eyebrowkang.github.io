@@ -40,9 +40,9 @@ jobs:
 
       - name: Setup Environment Variables
         run: |
-          echo "VITE_SUP_PROJECT_URL=${{ secrets.SUP_PROJECT_URL }}" >> .env
-          echo "VITE_SUP_ANON_KEY=${{ secrets.SUP_ANON_KEY }}" >> .env
-          echo "VITE_HCAPTCHA_SITE_KEY=${{ secrets.HCAPTCHA_SITE_KEY }}" >> .env
+          echo "VITE_SUP_PROJECT_URL=${{ secrets.SUP_PROJECT_URL }}" >> .env.production
+          echo "VITE_SUP_ANON_KEY=${{ secrets.SUP_ANON_KEY }}" >> .env.production
+          echo "VITE_HCAPTCHA_SITE_KEY=${{ secrets.HCAPTCHA_SITE_KEY }}" >> .env.production
 
       - name: Build
         run: pnpm build

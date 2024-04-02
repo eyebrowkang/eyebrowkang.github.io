@@ -7,6 +7,9 @@
       "DOM",
       "DOM.Iterable"
     ],
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "jsx": "react",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,

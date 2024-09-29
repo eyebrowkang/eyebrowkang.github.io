@@ -4,6 +4,7 @@ import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import react from 'eslint-plugin-react';
+import globals from 'globals';
 
 export default tseslint.config(
   eslint.configs.recommended,
@@ -19,10 +20,13 @@ export default tseslint.config(
           jsx: true,
         },
       },
+      globals: {
+        ...globals.browser,
+      },
     },
   },
   eslintConfigPrettier,
   {
-    ignores: ['dist'],
-  },
+    ignores: ['dist']
+  }
 );

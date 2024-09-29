@@ -101,7 +101,7 @@ export default function LoginForm({ type }: LoginFormProps) {
       console.log(error.message);
     }
 
-    data && console.log(data);
+    console.log(data);
   };
 
   const handleSendEmail = async () => {
@@ -133,13 +133,9 @@ export default function LoginForm({ type }: LoginFormProps) {
 
   return (
     <div className="w-96 relative flex flex-col p-4 rounded-md text-black bg-white shadow gap-4">
-      <h2 className="text-2xl font-bold text-cyan-700 text-center">
-        Tech Test Bed
-      </h2>
+      <h2 className="text-2xl font-bold text-cyan-700 text-center">Tech Test Bed</h2>
       <form className="flex flex-col gap-3" onSubmit={(e) => handleSubmit(e)}>
-        <div
-          className={'block relative ' + (type === 'recovery' ? 'hidden' : '')}
-        >
+        <div className={'block relative ' + (type === 'recovery' ? 'hidden' : '')}>
           <label
             htmlFor="email"
             className="block text-gray-600 cursor-text text-sm leading-[140%] font-normal mb-2"
@@ -198,10 +194,7 @@ export default function LoginForm({ type }: LoginFormProps) {
       </form>
       {type === 'reset' ? null : (
         <div className="text-sm text-right mt-6">
-          <Link
-            to={linkTo}
-            className="text-cyan-700 cursor-pointer hover:text-cyan-900"
-          >
+          <Link to={linkTo} className="text-cyan-700 cursor-pointer hover:text-cyan-900">
             {buttonTextArr[1]}
           </Link>
         </div>
